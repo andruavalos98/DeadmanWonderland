@@ -1,5 +1,6 @@
 body {
     font-family: 'Quicksand', sans-serif;
+    padding: 0;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -14,16 +15,17 @@ header {
     background-color: rgb(238, 58, 58);
 }
 
-.nav__cont {
-    /* width: 90%; */
-    /* max-width: 1000px; */
-    /* margin: 20px auto; */
+#btn-menu {
+    display: none;
 }
 
 .img__nav {
     text-align: center;
-    width: 50%;
-    height: 30%;
+    margin: 0;
+}
+
+.img {
+    width: 100%;
 }
 
 
@@ -32,14 +34,59 @@ header {
 .nav__items {
     list-style: none;
     text-align: center;
+    padding-left: 0;
+    margin: 0;
 }
 
 .li__item {
     border-top: 1px solid white;
-    padding: 10px;
+}
+
+.nav__item:hover {
+    color: black;
+    background-color: white;
 }
 
 .nav__item {
+    display: block;
     text-decoration: none;
     color: white;
+    padding: 10px;
+}
+
+
+/* EDICION DEL ARGUMENTO */
+
+.arg__cont {
+    margin: 15px;
+    padding: 10px;
+}
+
+
+/* VISTA PARA CELULARES */
+
+@media all and (min-width: 320px) {
+    .nav__cont {
+        position: absolute;
+        background: rgb(238, 58, 58);
+        width: 100%;
+        margin-left: -100%;
+        transition: all 0.5s;
+    }
+    .nav__items {
+        display: flex;
+        flex-direction: column;
+    }
+    .btn-menu {
+        display: block;
+        background: rgb(238, 58, 58);
+        font-size: 25px;
+        padding: 10px;
+    }
+    header label:hover {
+        cursor: pointer;
+    }
+    #btn-menu:checked~.nav__cont {
+        margin: 0;
+    }
 }
