@@ -1,0 +1,45 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    width: 100vw;
+    background-color: rgb(238, 58, 58);
+}
+
+.nav__cont {
+    /* width: 90%; */
+    /* max-width: 1000px; */
+    /* margin: 20px auto; */
+}
+
+.img__nav {
+    text-align: center;
+    width: 50%;
+    height: 30%;
+}
+
+
+/* edicion del nav para mobile*/
+
+.nav__items {
+    list-style: none;
+    text-align: center;
+}
+
+.li__item {
+    border-top: 1px solid white;
+    padding: 10px;
+}
+
+.nav__item {
+    text-decoration: none;
+    color: white;
+}
