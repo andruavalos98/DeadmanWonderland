@@ -2,7 +2,7 @@ body {
     font-family: 'Quicksand', sans-serif;
     padding: 0;
     width: 100vw;
-    height: 100vh;
+    /* height: 100vh; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -25,7 +25,7 @@ header {
 }
 
 .img {
-    width: 100%;
+    width: 90%;
 }
 
 
@@ -58,7 +58,27 @@ header {
 /* EDICION DEL ARGUMENTO */
 
 .arg__cont {
-    margin: 15px;
+    margin: 20px;
+    padding: 50px;
+}
+
+
+/* EDICION DE PROTAGONISTAS */
+
+.prota__cont div {
+    border-top: 4px solid rgb(238, 58, 58);
+    border-bottom: 4px solid rgb(238, 58, 58);
+    margin: 10px;
+}
+
+.prota__cont h3,
+.prota__cont h1,
+.prota__cont figure {
+    text-align: center;
+}
+
+.prota__cont p {
+    margin: 10px;
     padding: 10px;
 }
 
