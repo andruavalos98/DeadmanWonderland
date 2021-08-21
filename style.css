@@ -13,6 +13,7 @@ header {
     top: 0;
     width: 100vw;
     background-color: rgb(238, 58, 58);
+    z-index: 200;
 }
 
 #btn-menu {
@@ -90,49 +91,10 @@ header {
 }
 
 
-/* EDICION DE MERCH */
-
-.gallery__container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-auto-rows: 150px;
-    padding: 20px;
-    grid-gap: 10px;
-}
-
-.gallery__item {
-    position: relative;
-}
-
-.gallery__img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.gallery__title {
-    position: absolute;
-    bottom: 0;
-    color: white;
-    background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
-    width: 100%;
-    margin: 0;
-    padding: 10px;
-}
-
-.gallery__item:nth-child(1) {
-    grid-row-start: span 2;
-}
-
-.gallery__item:nth-child(2) {
-    grid-column-start: span 2;
-    grid-row-start: span 2;
-}
-
-
 /* VISTA PARA CELULARES */
 
 @media all and (min-width: 320px) {
+    /* EDICION DEL NAV */
     .nav__cont {
         position: absolute;
         background: rgb(238, 58, 58);
@@ -155,5 +117,128 @@ header {
     }
     #btn-menu:checked~.nav__cont {
         margin: 0;
+    }
+    /* PERSONAJES */
+    .prota__cont {
+        display: flex;
+        flex-direction: column
+    }
+    .prota__cont div {
+        margin: 10px;
+        padding: 10px;
+    }
+    .prota__img {
+        width: 20rem;
+        height: 20rem;
+    }
+    /* MERCH */
+    .gallery__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 150px;
+        padding: 20px;
+        grid-gap: 10px;
+    }
+    .gallery__item {
+        position: relative;
+    }
+    .gallery__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .gallery__title {
+        position: absolute;
+        bottom: 0;
+        color: white;
+        background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+    .gallery__item:nth-child(1) {
+        grid-row-start: span 2;
+    }
+    .gallery__item:nth-child(2) {
+        grid-column-start: span 2;
+        grid-row-start: span 2;
+    }
+    /* SUBSCRIPCION */
+    .subs__cont {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(238, 58, 58);
+        padding: 10px;
+        margin: 20px;
+    }
+    .subs__cont input {
+        padding: 5px;
+        margin: 10px;
+    }
+}
+
+
+/* VISTA PARA ESCRITORIO */
+
+@media all and (min-width: 1020px) {
+    /* NAV */
+    .btn-menu {
+        display: none;
+    }
+    .nav__cont {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin: 0;
+    }
+    .nav__items {
+        display: flex;
+        flex-direction: row;
+    }
+    .nav__item {
+        padding: 10px;
+    }
+    .li__item {
+        border-top: none;
+    }
+    /* PERSONAJES */
+    .personajes__cont {
+        display: flex;
+        flex-direction: row;
+    }
+    /* MERCH */
+    .gallery__container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-auto-rows: 200px;
+        padding: 20px;
+        grid-gap: 10px;
+    }
+    .gallery__item {
+        position: relative;
+    }
+    .gallery__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .gallery__title {
+        position: absolute;
+        bottom: 0;
+        color: white;
+        background: linear-gradient(rgba(255, 255, 255, 0), rgba(0, 0, 0, 1));
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+    }
+    .gallery__item:nth-child(1) {
+        grid-row-start: span 2;
+    }
+    .gallery__item:nth-child(2) {
+        grid-column-start: span 2;
+        grid-row-start: span 2;
+    }
+    .gallery__item:nth-child(3) {
+        grid-row-start: span 2;
     }
 }
